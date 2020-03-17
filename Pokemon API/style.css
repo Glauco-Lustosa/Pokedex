@@ -417,6 +417,13 @@ body {
     width: fit-content;
 }
 
+
+.modal-body {
+    text-align: center !important;
+    margin: 0 auto !important;
+
+}
+
 /*Media Querys*/
 /*Iphone 6 7 8 plus*/
 @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {

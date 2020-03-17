@@ -17,9 +17,11 @@ app.controller('pokemon', function ($scope, $http) {
   $scope.play = function () {
     if ($scope.pokemonId > 99) {
       var audio = document.getElementById("audiocem");
+      console.log(audio);
       audio.play();
-    } else{
+    } else {
       var audio = document.getElementById("audio");
+      console.log(audio);
       audio.play();
     }
   }
@@ -31,15 +33,14 @@ app.controller('pokemon', function ($scope, $http) {
       url: 'https://pokeapi.co/api/v2/pokemon/' + pokemonID
     }).then(function successCallback(response) {
 
-      console.log(response);
+      console.log(response.data.id);
+      $scope.pokemonId = response.data.id;
+      $scope.pokemonName = response.data.species.name;
       $scope.pokeSpinner = false;
       $scope.questionMark = false;
-      
-      // console.log('your string'.capitalize());
       $scope.pokemonSprite = response.data.sprites.front_default;
       var bla = response.data.species.name;
       $scope.pokemonName = bla.capitalize();
-      
       console.log($scope.pokemonName)
 
       if (response.data.id < 100) {
@@ -50,6 +51,7 @@ app.controller('pokemon', function ($scope, $http) {
         console.log($scope.pokemonId, $scope.pokemonName);
       } else {
         $scope.pokemonId = response.data.id;
+        $scope.play();
       }
 
     }, function errorCallback(response) {
