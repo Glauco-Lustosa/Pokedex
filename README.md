@@ -16,4 +16,4 @@
 3 — Como utilizar uma promessa, http request e o Angular JS de uma forma mais correta → Esse desafio foi bem interessante, primeiro vamos falar das promessas. Nelas você pode fazer de diversas maneiras, porém se não tiver o successCallback e o errorCallback você não consegue debugar ou ver o retorno dos dados de uma forma concisa. Já no http request tive que fazer algo que ele seja responsivo de acordo com o número do pokémon ou o nome dele. E por fim no Angular JS consigo afirmar que trabalhei com ele dentro da ServiceNow e alguns projetos fora, e posso afirmar que dependendo de onde utiliza você pode ter uma variação. Aqui utilizei o ng-app e o ng-module coisa que dentro da ServiceNow eu nunca precisei setar, mas isso é uma coisa boa, pois você consegue modular seu aplicativo de uma maneira mais eficaz.
 
  # Tecnologias utilizadas
- HTML5 | CSS | JavaScript | Angular | JS | BootStrap 4    
+ HTML5 | CSS | JavaScript | AngularJS | BootStrap 4    
